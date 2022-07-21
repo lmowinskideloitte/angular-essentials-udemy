@@ -1,10 +1,14 @@
 <p>twoja tablica przyrządów pomiarowych</p>
 <div>
-  <button (click)="onSwitchState()">Zakończ tablicowanie pomiarowe przyrządów tablicowanych</button>
+  <button (click)="onSwitchState()" class="btn btn-warning">Zakończ tablicowanie pomiarowe przyrządów tablicowanych</button>
 </div>
 <!--<p>{{ loadState }}</p>-->
 <p [textContent]="loadState"></p>
 <div>
 <!--  <input type="text" (input)="loadState = $event.target.value">-->
   <input type="text" [ngModel]="loadState">
+</div>
+<div>
+  <p>{{ number }}</p>
+  <button (click)="onIncrement()" class="btn btn-primary">Increment Number</button>
 </div>
