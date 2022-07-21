@@ -1,4 +1,7 @@
-import { Component } from "@angular/core";
+import {Component} from "@angular/core";
+import {random} from 'lodash';
+
+// declare var _: any;  // npm install --save @types/lodash installed translations from js -> ts
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +10,7 @@ import { Component } from "@angular/core";
 export class DashboardComponent {
   loadState = 'loading';
   number = 0;
+  randNumber = 0;
 
   onSwitchState() {
     this.loadState = 'finished';
@@ -14,5 +18,9 @@ export class DashboardComponent {
 
   onIncrement() {
     this.number += 1;
+  }
+
+  onRandomise() {
+    this.randNumber = random(1, 100);
   }
 }
