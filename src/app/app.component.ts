@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-essentials-udemy';
   rootName = 'Młody Gypsy';
+  rootItems = ['Piesiula', 'Kiciula', 'Wiewiura'];
+
+  onItemWasAdded(newItem: string) {
+    this.rootItems.push(newItem)
+    console.log(this.rootItems)
+  }
 
   onNameChanged(newName: string) {
     this.rootName = newName;
